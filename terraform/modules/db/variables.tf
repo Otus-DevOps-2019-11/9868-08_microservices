@@ -16,6 +16,12 @@ variable private_key_path {
   description = "Path to the private key used for ssh access"
 }
 
+variable private_key_path {
+  description = "Path to the private key used for ssh access. Used by travis only"
+  default     = "/home/dinky/.ssh/appuser"
+}
+
+
 variable db_disk_image {
   description = "Disk image for reddit DB"
   default     = "projects/forward-karma-262407/global/images/reddit-base-1578467159"
