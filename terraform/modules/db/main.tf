@@ -9,16 +9,17 @@ resource "google_compute_instance" "db" {
     }
   }
 
-  metadata {
-    ssh-keys = "appuser:${file(var.public_key_path)}"
-  }
-
   tags = ["reddit-db"]
 
   network_interface {
     network       = "default"
     access_config = {}
   }
+
+  metadata {
+    ssh-keys = "appuser:${file(var.public_key_path)}"
+  }
+
 }
 
 resource "null_resource" "app" {
