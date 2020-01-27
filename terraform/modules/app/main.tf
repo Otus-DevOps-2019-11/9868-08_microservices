@@ -25,7 +25,7 @@ resource "google_compute_instance" "app" {
 
 }
 
-resource "null_resource" "db" {
+resource "null_resource" "app" {
   count = var.provisioners_enabled
 
   connection {
