@@ -22,12 +22,12 @@ resource "google_compute_instance" "db" {
 
 }
 
-resource "null_resource" "app" {
+resource "null_resource" "db" {
   count = var.provisioners_enabled
 
   connection {
     type        = "ssh"
-    host        = "google_compute_instance.db.network_interface.0.access_config.0.assigned_nat_ip"
+    host        = "google_compute_instance.db.network_interface.0.access_config.0.nat_ip"
     user        = "appuser"
     agent       = "false"
     private_key = "file(var.private_key_path)"
