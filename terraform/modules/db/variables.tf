@@ -25,4 +25,6 @@ variable db_disk_image {
 
 variable provisioners_enabled {
   description = "Provisoners toggle"
+  default     = "3"
 }
+

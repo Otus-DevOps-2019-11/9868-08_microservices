@@ -1,11 +1,11 @@
 resource "google_compute_instance" "db" {
   name         = "reddit-db"
-  machine_type = "${var.machine_type}"
-  zone         = "${var.zone}"
+  machine_type = "var.machine_type"
+  zone         = "var.zone"
 
   boot_disk {
     initialize_params {
-      image = "${var.db_disk_image}"
+      image = "var.db_disk_image"
     }
   }
 
@@ -13,24 +13,24 @@ resource "google_compute_instance" "db" {
 
   network_interface {
     network       = "default"
-    access_config = {}
+#    access_config = {}
   }
 
-  metadata {
+  metadata = {
     ssh-keys = "appuser:${file(var.public_key_path)}"
   }
 
 }
 
 resource "null_resource" "app" {
-  count = "${var.provisioners_enabled}"
+  count = var.provisioners_enabled
 
   connection {
     type        = "ssh"
-    host        = "${google_compute_instance.db.network_interface.0.access_config.0.assigned_nat_ip}"
+    host        = "google_compute_instance.db.network_interface.0.access_config.0.assigned_nat_ip"
     user        = "appuser"
     agent       = "false"
-    private_key = "${file(var.private_key_path)}"
+    private_key = "file(var.private_key_path)"
   }
 
   provisioner "file" {
