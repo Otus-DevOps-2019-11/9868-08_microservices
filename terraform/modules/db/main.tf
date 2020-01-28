@@ -13,7 +13,9 @@ resource "google_compute_instance" "db" {
 
   network_interface {
     network       = "default"
-#    access_config = {}
+    access_config  {
+       // Ephemeral IP
+    }
   }
 
   metadata = {
@@ -30,7 +32,7 @@ resource "null_resource" "db" {
     host        = "google_compute_instance.db.network_interface.0.access_config.0.nat_ip"
     user        = "appuser"
     agent       = "false"
-    private_key = "file(var.private_key_path)"
+    private_key = file(var.private_key_path)
   }
 
   provisioner "file" {
