@@ -1,7 +1,8 @@
 variable zone {
   description = "Zone"
-  default     = "europe-west1-b"
+  default     = "europe-north1-a"
 }
+
 
 variable machine_type {
   description = "Type of virtual machine instance for db"
@@ -10,6 +11,7 @@ variable machine_type {
 
 variable public_key_path {
   description = "Path to the public key used for ssh access"
+  default = "/home/dinky/.ssh/appuser.pub"
 }
 
 variable private_key_path {
@@ -20,11 +22,22 @@ variable private_key_path {
 
 variable db_disk_image {
   description = "Disk image for reddit DB"
-  default     = "projects/forward-karma-262407/global/images/reddit-base-1578467159"
+  default = "projects/infra-986808/global/images/reddit-base-1578651793"
 }
 
 variable provisioners_enabled {
   description = "Provisoners toggle"
   default     = "3"
+}
+
+variable project {
+  description = "infra-986808"
+  default     = "infra-986808"
+}
+
+# значение по умолчанию региона
+variable region {
+  description = "Значение по умолчанию Region"
+  default     = "europe-west1"
 }
 

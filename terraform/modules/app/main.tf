@@ -1,28 +1,22 @@
 resource "google_compute_instance" "app" {
   name         = "reddit-app"
   machine_type = "var.machine_type"
-  zone         = "var.zone"
-
+  zone = "europe-west1-b"
+  tags = ["reddit-db"]
   boot_disk {
     initialize_params {
       image = "var.app_disk_image"
     }
-  }
+}
 
-  tags = ["reddit-app"]
-
-  network_interface {
-    network = "default"
-
-    access_config {
+network_interface {
+   network = "default"
+   access_config {
       nat_ip = "google_compute_address.app_ip.address"
     }
   }
-  
   metadata = {
-    ssh-keys = "appuser:${file(var.public_key_path)}"
-  }
-
+    ssh-keys = file(var.public_key_path)
 }
 
 resource "null_resource" "app" {
@@ -33,7 +27,7 @@ resource "null_resource" "app" {
     host        = "google_compute_instance.app.network_interface.0.access_config.0.nat_ip"
     user        = "appuser"
     agent       = "false"
-    private_key = "file(var.private_key_path)"
+    private_key = file(var.private_key_path)
   }
 
   provisioner "file" {
