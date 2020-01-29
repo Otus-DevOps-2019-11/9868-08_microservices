@@ -6,8 +6,8 @@ After=network.target
 Type=simple
 User=appuser
 WorkingDirectory=/home/appuser/reddit
-Environment=DATABASE_URL=${reddit_db_ip}:27017
-ExecStart=/bin/bash -lc 'puma'
+Environment=DATABASE_URL=${db_url}
+ExecStart=/bin/bash -lc 'puma -b tcp://0.0.0.0:9292'
 Restart=always
 
 [Install]
