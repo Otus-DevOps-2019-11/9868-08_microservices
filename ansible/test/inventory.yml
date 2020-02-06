@@ -1,4 +1,0 @@
-
-        hosts:
-          appserver:
-               ansible_host: 
