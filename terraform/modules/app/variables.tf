@@ -11,7 +11,6 @@ variable machine_type {
 variable app_disk_image {
   description = "Disk image for reddit app"
   default = "projects/infra-986808/global/images/reddit-base-1578651793"
-#  default     = "projects/infra-986808/zones/europe-west1-b/disks/dinky"
 }
 
 variable reddit_db_ip {
@@ -43,7 +42,7 @@ variable public_key {
 
 variable disk_image {
   description = "диск с образом системы (заготовлен заранее)"
-  default     = "projects/forward-karma-262407/global/images/reddit-base-1578467159"
+  default     = "projects/infra-986808/global/images/reddit-base-1578651793"
 }
 
 variable app_domain {

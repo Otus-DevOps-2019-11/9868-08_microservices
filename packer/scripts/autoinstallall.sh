@@ -1,5 +1,5 @@
 #!/bin/bash
 
-install_ruby.sh
-install_mongodb.sh
-deploy.sh
+./packer/scripts/install_ruby.sh
+./packer/scripts/install_mongodb.sh
+./packer/scripts/deploy.sh

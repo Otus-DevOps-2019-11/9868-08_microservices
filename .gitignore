@@ -6,4 +6,8 @@
 *.github
 .*
 *.retry
+jdauphant.nginx
+
+# Ansible Vault key files
+vault.key
 
