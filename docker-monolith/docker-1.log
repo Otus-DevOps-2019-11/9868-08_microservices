@@ -1,0 +1,12 @@
+REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
+dinky98/test-tmp           latest              d413c0f8b461        50 seconds ago      127MB
+dinky98/my-first-repo      latest              1b119a9681ea        3 hours ago         1.22MB
+dinky98/test               latest              3b1c1fe0a874        3 hours ago         127MB
+nginx                      latest              5ad3bd0e67a9        2 weeks ago         127MB
+busybox                    latest              6d5fcfe5ff17        6 weeks ago         1.22MB
+wordpress                  latest              ee025cbcbc20        2 months ago        539MB
+python                     latest              0a3a95c81a2b        2 months ago        932MB
+9868-08/ifconfig           0.1                 d884d9bcaf9c        2 months ago        93.1MB
+centos                     centos7             5e35e350aded        2 months ago        203MB
+express42/otus-homeworks   0.7                 c57828f2dcb4        3 months ago        1.02GB
+ubuntu                     latest              775349758637        3 months ago        64.2MB
