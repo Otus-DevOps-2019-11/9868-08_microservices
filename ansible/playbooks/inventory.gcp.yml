@@ -1,0 +1,10 @@
+plugin: gcp_compute
+projects:
+  - infra-986808
+zones:
+  - "europe-west1-b"
+filters: []
+auth_kind: serviceaccount
+service_account_file: "/home/dinky/Documents/Keepass/infra-986808.json"
+#hostnames:
+#  - name
