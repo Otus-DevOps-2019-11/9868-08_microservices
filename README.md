@@ -1,6 +1,7 @@
 # 9868-08_infra
 9868-08 Infra repository
 
+<<<<<<< HEAD
 ## Homework-15 (docker-2)
 - Создан docker host
 - Создан свой образа
@@ -11,6 +12,9 @@
 
 
 ## Homework-13 Ansible-4
+=======
+## Homework-11 Ansible-4
+>>>>>>> 7b34d4482f23228c9f3d637b945befbcc759266d
 
 #### В процессе сделано:
 
@@ -23,14 +27,23 @@
   - установлены необходимые компоненты для тестирование в virtualenv: ansible, molecule, testinfra, python-vagrant;
   - создана заготовка для тестов роли db в Vagrant;
   - добавлены тесты (использованы модули Testinfra) в файл db/molecule/default/tests/test_default.py;
+<<<<<<< HEAD
   - описана (db/molecule/default/molecule.yml) и создана виртуальная машина для тестирование;
+=======
+  - описана (db/molecule/default/molecule.yml) и создана виртуальная машина для тестирование; 
+    !!! Дла работы с molecula на рабочей машине потребовались права root!
+>>>>>>> 7b34d4482f23228c9f3d637b945befbcc759266d
   - выполены тесты с помощью Molecule:
     - molecule converge;
     - molecule verify;
 - образы Packer (reddit-app-base-*, reddit-db-base-*) пересобраны c использованием ролей app и db соответственно;
 
 
+<<<<<<< HEAD
 ## Homework-12 Ansible-3
+=======
+## Homework-10 Ansible-3
+>>>>>>> 7b34d4482f23228c9f3d637b945befbcc759266d
 
 #### В процессе сделано:
 
@@ -38,6 +51,7 @@
 - созданы окружения stage и prod, определены их настройки;
 - произведен рефакторинг инфраструктурного репозитория в директории ansible;
 - настроено исрользование community роли jdauphant.nginx в stage и prod окружениях, открыт tcp порт 80 в конфигурации terraform;
+- в конфигурацию Terraform открыт 80 порт
 - работа с Ansible Vault:
   - добален плейбук для создания пользователей ОС;
   - созданы и зашифрованы файлы с данными пользователями для окружений stage и prod;
