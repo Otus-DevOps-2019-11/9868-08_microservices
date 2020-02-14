@@ -1,7 +1,13 @@
 # 9868-08_infra
 9868-08 Infra repository
 
-## Homework-15
+## Homework-15 (docker-2)
+- Создан docker host
+- Создан свой образа
+- Свой образ залит на Docker Hub
+- Создана машина на GCP. На этой машине развернут свой образ из Docker Hub 
+- Настроено поднятие инстансов с помощью Terraform, их количество задается
+переменной;
 
 
 ## Homework-13 Ansible-4

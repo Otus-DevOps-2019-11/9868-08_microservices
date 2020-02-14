@@ -34,7 +34,7 @@ network_interface {
   network = "default"
   access_config {}
     // Ephemeral IP
-  }
+}
   metadata = {
     ssh-keys = file(var.public_key_path)
   }
