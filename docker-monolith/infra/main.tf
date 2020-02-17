@@ -26,4 +26,9 @@ resource "google_compute_instance" "app" {
   }
 }
 
+  resource "docker_container" "reddit" {
+    name  = "my-reddit"
+    image = "dinky98/otus-reddit:1.0"
+  }
+
 
