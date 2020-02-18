@@ -1,7 +1,6 @@
 # рабочий проект
 variable project {
-  description = "infra-986808"
-  default     = "infra-986808"
+  default     = "docker-267511"
 }
 
 # значение по умолчанию региона
@@ -21,7 +20,7 @@ variable public_key {
 
 variable disk_image {
   description = "диск с образом системы (заготовлен заранее)"
-  default     = "projects/infra-986808/global/images/reddit-base-1578651793"
+  default     = "projects/docker-267511/zones/europe-north1-b/disks/ubuntu-16-lts-base-docker"
 }
 
 variable app_domain {
@@ -68,7 +67,7 @@ variable provisioners_enabled {
 
 
 variable app_disk_image {
-  default = "projects/infra-986808/global/images/reddit-base-1578651793"
+  default = "projects/docker-267511/global/images/ubuntu-16-lts-base-docker"
 }
 
 variable private_key_path {

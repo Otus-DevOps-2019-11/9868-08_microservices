@@ -1,5 +1,0 @@
-plugin: gcp_compute
-projects:
-  - docker-267511
-auth_kind: serviceaccount
-service_account_file: /home/dinky/Documents/Keepass/infra-986808.json
