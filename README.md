@@ -1,20 +1,24 @@
 # 9868-08_infra
-9868-08 Infra repository
+9868-08 microservices repository
 
-<<<<<<< HEAD
+## Homework-16 (docker-3)
+- Наше приложение разбито на несколько компонентов
+- описаны и собираны с учетом рекомендациq линтера hadolint Docker-образы для сервисного приложения
+
+
 ## Homework-15 (docker-2)
 - Создан docker host
 - Создан свой образ
 - Свой образ залит на Docker Hub
 - Создана машина в GCP. На этой машине развернут свой образ из Docker Hub 
-- Настроено поднятие инстансов докер с помощью Terraform, их количество задается
-переменной
+- Настроено поднятие инстанса с докером с помощью Terraform, их количество НЕ задается переменной.   count > 1 вызывает ошибку 
+Error: Cycle: google_compute_instance.app[2], google_compute_instance.app[1], google_compute_instance.app[0]
 
 
 ## Homework-13 Ansible-4
 =======
 ## Homework-11 Ansible-4
->>>>>>> 7b34d4482f23228c9f3d637b945befbcc759266d
+
 
 #### В процессе сделано:
 
@@ -27,23 +31,21 @@
   - установлены необходимые компоненты для тестирование в virtualenv: ansible, molecule, testinfra, python-vagrant;
   - создана заготовка для тестов роли db в Vagrant;
   - добавлены тесты (использованы модули Testinfra) в файл db/molecule/default/tests/test_default.py;
-<<<<<<< HEAD
+
   - описана (db/molecule/default/molecule.yml) и создана виртуальная машина для тестирование;
 =======
   - описана (db/molecule/default/molecule.yml) и создана виртуальная машина для тестирование; 
     !!! Дла работы с molecula на рабочей машине потребовались права root!
->>>>>>> 7b34d4482f23228c9f3d637b945befbcc759266d
   - выполены тесты с помощью Molecule:
     - molecule converge;
     - molecule verify;
 - образы Packer (reddit-app-base-*, reddit-db-base-*) пересобраны c использованием ролей app и db соответственно;
 
 
-<<<<<<< HEAD
+
 ## Homework-12 Ansible-3
 =======
 ## Homework-10 Ansible-3
->>>>>>> 7b34d4482f23228c9f3d637b945befbcc759266d
 
 #### В процессе сделано:
 
