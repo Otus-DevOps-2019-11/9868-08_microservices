@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-# 9868-08_microservices
-9868-08 microservices repository
+## 9868-08 microservices repository
 =======
-# Micorservices
 
 ## Homework-16 (docker-3)
 
@@ -23,4 +20,7 @@
 Образ оптимизировать с помощью linter. Добавлено обновление pip
 Запущено приложение на основе Docker-образа
 Размер образа умешьшился ~20МБ благодаря единомой команде сбора
+<<<<<<< HEAD
 >>>>>>> 1
+=======
+>>>>>>> 5c90353cf541025b9d18a28dc54a74272b297c5a
