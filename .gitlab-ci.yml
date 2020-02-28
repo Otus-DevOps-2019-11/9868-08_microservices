@@ -4,7 +4,7 @@ stages:
   - review
 
 variables:
-DATABASE_URL: 'mongodb://mongo/user_posts'
+DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
 
 before_script:
 - cd reddit
