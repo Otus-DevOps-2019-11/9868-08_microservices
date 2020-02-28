@@ -4,11 +4,11 @@ stages:
   - review
 
 variables:
-DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
+  DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
 
 before_script:
-- cd reddit
-- bundle install
+  - cd reddit
+  - bundle install
 
 build_job:
   stage: build
