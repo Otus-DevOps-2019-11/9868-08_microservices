@@ -17,21 +17,21 @@ build_job:
 
 test_unit_job:
   stage: test
-    services:
-    - mongo:latest
+  services:
+  - mongo:latest
   script:
-    - ruby simpletest.rb
+  - ruby simpletest.rb
 
 
 test_integration_job:
   stage: test
   script:
-    - echo 'Testing 2'
+  - echo 'Testing 2'
 
 deploy_dev_job:
   stage: review
   script:
-    - echo 'Deploy'
+  - echo 'Deploy'
   environment:
     name: dev
     url: http://dev.example.com
