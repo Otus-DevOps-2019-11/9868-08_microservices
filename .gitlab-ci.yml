@@ -7,7 +7,7 @@ variables:
   DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
 
 before_script:
-  - aptitude install libgemplugin-ruby
+  - apt-get install ruby ruby-dev
   - cd reddit
   - gem install bundler
   - bundle install
