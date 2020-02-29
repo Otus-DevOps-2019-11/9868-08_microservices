@@ -7,6 +7,7 @@ variables:
   DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
 
 before_script:
+  - apt-get install gem -y
   - cd reddit
   - gem install bundler
   - bundle install
