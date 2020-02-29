@@ -7,10 +7,11 @@ variables:
   DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
 
 before_script:
-  - pwd
-  - ls
   - cd reddit
   - bundle install
+  - pwd
+  - ls
+
 
 build_job:
   stage: build
