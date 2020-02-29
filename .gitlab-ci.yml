@@ -1,0 +1,39 @@
+stages:
+  - build
+  - test
+  - review
+
+variables:
+  DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
+
+before_script:
+  - pwd
+  - ls
+  - cd reddit
+  - bundle install
+
+build_job:
+  stage: build
+  script:
+    - echo 'Building'
+
+test_unit_job:
+  stage: test
+  services:
+  - mongo:latest
+  script:
+  - ruby simpletest.rb
+
+
+test_integration_job:
+  stage: test
+  script:
+  - echo 'Testing 2'
+
+deploy_dev_job:
+  stage: review
+  script:
+  - echo 'Deploy'
+  environment:
+    name: dev
+    url: http://dev.example.com
