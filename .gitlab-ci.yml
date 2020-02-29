@@ -7,11 +7,8 @@ variables:
   DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
 
 before_script:
-  - apt-get update -yq
-  - apt-get install -y ruby ruby-dev rubygems-integration
-  - gem install dpl
   - cd reddit
-  - gem install bundler
+  - add bundle update listen
   - bundle install
   - pwd
   - ls
