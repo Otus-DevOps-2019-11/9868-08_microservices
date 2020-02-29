@@ -7,7 +7,6 @@ variables:
   DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
 
 before_script:
-  - sudo apt install git && git clone https://github.com/express42/reddit.git && rm -rf ./reddit/.git
   - pwd
   - ls
   - cd reddit
