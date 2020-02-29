@@ -1,3 +1,5 @@
+image: ruby:2.4.2
+
 stages:
   - build
   - test
@@ -8,10 +10,7 @@ variables:
 
 before_script:
   - cd reddit
-  - add bundle update listen
   - bundle install
-  - pwd
-  - ls
 
 
 build_job:
