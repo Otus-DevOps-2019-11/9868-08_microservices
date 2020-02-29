@@ -7,7 +7,12 @@ variables:
   DATABASE_URL: 'mongodb://34.77.182.163/user_posts'
 
 before_script:
-  - aptitude install ruby ruby-dev
+  - apt-get update -yq
+  - apt-get install -y ruby ruby-dev rubygems-integration
+  - gem install dpl
+  - dpl --provider=heroku --app=teeth-taroko --api-key=$HEROKU_STAGING_API_KEY
+  only:
+  - develop
   - cd reddit
   - gem install bundler
   - bundle install
