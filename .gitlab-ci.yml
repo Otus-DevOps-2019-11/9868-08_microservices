@@ -10,9 +10,6 @@ before_script:
   - apt-get update -yq
   - apt-get install -y ruby ruby-dev rubygems-integration
   - gem install dpl
-  - dpl --provider=heroku --app=teeth-taroko --api-key=$HEROKU_STAGING_API_KEY
-  only:
-  - develop
   - cd reddit
   - gem install bundler
   - bundle install
