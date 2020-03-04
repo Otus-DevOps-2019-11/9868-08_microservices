@@ -1,0 +1,34 @@
+iversion: '2.0'
+services:
+  prometheus:
+    image: dinky98/prometheus:latest
+    ports:
+      - '9090:9090'
+    volumes:
+      - prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention=1d'
+    networks:
+      - front_net
+      - back_net
+  cadvisor:
+    image: google/cadvisor:v0.29.0
+    volumes:
+      - '/:/rootfs:ro'
+      - '/var/run:/var/run:rw'
+      - '/sys:/sys:ro'
+      - '/var/lib/docker/:/var/lib/docker:ro'
+  ports:
+    - '8080:8080'
+
+volumes:
+  prometheus_data:
+
+networks:
+    front_net:
+        driver: bridge
+    back_net:
+        driver: bridge
+
