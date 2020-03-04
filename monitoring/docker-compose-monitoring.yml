@@ -1,11 +1,11 @@
-iversion: '2.0'
+version: '2.0'
 services:
   prometheus:
     image: dinky98/prometheus:latest
     ports:
       - '9090:9090'
     volumes:
-      - prometheus
+      - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
@@ -20,8 +20,8 @@ services:
       - '/var/run:/var/run:rw'
       - '/sys:/sys:ro'
       - '/var/lib/docker/:/var/lib/docker:ro'
-  ports:
-    - '8080:8080'
+    ports:
+      - '8080:8080'
 
 volumes:
   prometheus_data:
