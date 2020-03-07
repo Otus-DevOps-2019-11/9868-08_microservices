@@ -40,7 +40,17 @@
 Образ оптимизировать с помощью linter. Добавлено обновление pip
 Запущено приложение на основе Docker-образа
 Размер образа умешьшился ~20МБ благодаря единомой команде сбора
-<<<<<<< HEAD
->>>>>>> 1
-=======
->>>>>>> 5c90353cf541025b9d18a28dc54a74272b297c5a
+
+
+## Homework-6 (GCP)
+
+#### В процессе сделано:
+testapp_IP=35.228.167.75
+testapp_port=9292
+ADDED install scripts:
+deploy.sh
+install_mongodb.sh
+install_ruby.sh
+and startup script:
+autoinstallall.sh
+
