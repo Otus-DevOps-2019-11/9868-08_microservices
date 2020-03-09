@@ -1,4 +1,4 @@
-version: '2.0'
+version: '2'
 services:
   prometheus:
     image: dinky98/prometheus:latest
@@ -22,13 +22,18 @@ services:
       - '/var/lib/docker/:/var/lib/docker:ro'
     ports:
       - '8080:8080'
+    networks:
+      - front_net
+      - back_net
+
 
 volumes:
   prometheus_data:
 
 networks:
-    front_net:
-        driver: bridge
-    back_net:
-        driver: bridge
-
+  front_net:
+    external: true
+    
+  back_net:
+    external: true
+    
