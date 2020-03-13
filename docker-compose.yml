@@ -35,6 +35,12 @@ services:
       - '--path.procfs=/host/proc'
       - '--path.sysfs=/host/sys'
       - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
+    ports:
+      - 9100:9100/tcp
+    networks:
+      - front_net
+      - back_net
+
 
 
 volumes:

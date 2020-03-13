@@ -11,8 +11,8 @@ services:
       - '--storage.tsdb.path=/prometheus'
       - '--storage.tsdb.retention=1d'
     networks:
-      - front_net
-      - back_net
+      - srv_front_net
+      - srv_back_net
   cadvisor:
     image: google/cadvisor:v0.29.0
     volumes:
@@ -23,17 +23,17 @@ services:
     ports:
       - '8080:8080'
     networks:
-      - front_net
-      - back_net
+      - srv_front_net
+      - srv_back_net
 
 
 volumes:
   prometheus_data:
 
 networks:
-  front_net:
+  srv_front_net:
     external: true
     
-  back_net:
+  srv_back_net:
     external: true
     
