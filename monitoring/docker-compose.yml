@@ -13,17 +13,17 @@ services:
       - front_net
     depends_on:
       - post_db
-    image: dinky98/ui:1.0
+    image: dinky98/ui:3.0
 
   post:
-    image: dinky98/post:1.0
+    image: dinky98/post:3.0
     networks:
       - front_net
       - back_net
 
 
   comment:
-    image: dinky98/comment
+    image: dinky98/comment:latest
     networks:
       - front_net
       - back_net
