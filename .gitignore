@@ -1,0 +1,20 @@
+.terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.github
+.*
+*.retry
+jdauphant.nginx
+
+# Ansible Vault key files
+vault.key
+
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
