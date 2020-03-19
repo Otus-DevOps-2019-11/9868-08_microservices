@@ -33,6 +33,8 @@ services:
       - prometheus
     ports:
       - 3000:3000
+    networks:
+      - front_net
 
 
 
