@@ -2,9 +2,24 @@
 9868-08 microservices repository
 
 
+## Homework-21 (monitoring-2)
+
+• Настроен мониторинг Docker контейнеров. К сожалению мне не удалось настроить отправку оповещение в слак
+• Отработана визуализация метрик
+• Собраны метрики работы приложения и бизнес метрики
+• образы контейнеров загружены в докерхаб
+https://hub.docker.com/repository/docker/dinky98/prometheus
+https://hub.docker.com/repository/docker/dinky98/ui
+https://hub.docker.com/repository/docker/dinky98/comment
+https://hub.docker.com/repository/docker/dinky98/post
+https://hub.docker.com/repository/docker/dinky98/prometheus
+https://hub.docker.com/repository/docker/dinky98/alertmanager
+
+
+
 ## Homework-20 (monitoring-1)
 
-- Prometheus: запущен, сконфигурован
+•  Prometheus: запущен, сконфигурован
 • Изучен мониторинг состояния микросервисов
 • Собраны метрики хоста с использованием экспортера
 
