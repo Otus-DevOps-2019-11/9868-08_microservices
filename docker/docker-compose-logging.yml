@@ -2,16 +2,15 @@
 version: '3'
 services:
   fluentd:
-    build: ./fluentd
     image: dinky98/fluentd
     ports:
       - "24224:24224"
       - "24224:24224/udp"
     networks:
-      - front_net
-      - back_net
-    depends_on:
-      - post_db
+      - docker_front_net
+      - docker_back_net
+#    depends_on:
+#      - post_db
 
   elasticsearch:
     image: elasticsearch:7.4.0
@@ -20,22 +19,22 @@ services:
     ports:
       - "9200:9200"
     networks:
-      - front_net
-      - back_net
+      - docker_front_net
+      - docker_back_net
 
   kibana:
-    image: kibana
+    image: kibana:7.4.0
     ports:
       - "5601:5601"
     networks:
-      - front_net
-      - back_net
+      - docker_front_net
+      - docker_back_net
     depends_on:
       - elasticsearch
       - fluentd
 
-#networks:
-#  docker_front_net:
-#    external: true
-#  docker_back_net:
-#    external: true
+networks:
+  docker_front_net:
+    external: true
+  docker_back_net:
+    external: true
