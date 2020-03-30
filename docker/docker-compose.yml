@@ -7,17 +7,27 @@ services:
     networks:
       - back_net
   ui:
-    image: ${USERNAME}/ui:3.0
+    image: dinky98/ui:3.0
+    environment:
+      - POST_SERVICE_HOST=post
+      - POST_SERVICE_PORT=5000
+      - COMMENT_SERVICE_HOST=comment
+      - COMMENT_SERVICE_PORT=9292
     ports:
       - 9292:9292/tcp
     networks:
       - front_net
+      - back_net
     depends_on:
-      - post_db
-
+      - post
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.ui
 
   post:
-    image: ${USERNAME}/post:3.0
+    image: dinky98/post:3.0
     networks:
       - front_net
       - back_net
@@ -29,14 +39,14 @@ services:
 
 
   comment:
-    image: ${USERNAME}/comment:3.0
+    image: dinky98/comment:3.0
     networks:
       - front_net
       - back_net
 
 
   prometheus:
-    image: ${USERNAME}/prometheus
+    image: dinky98/prometheus
     ports:
       - '9090:9090'
     volumes:
