@@ -13,6 +13,7 @@ services:
       - POST_SERVICE_PORT=5000
       - COMMENT_SERVICE_HOST=comment
       - COMMENT_SERVICE_PORT=9292
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     ports:
       - 9292:9292/tcp
     networks:
@@ -28,6 +29,8 @@ services:
 
   post:
     image: dinky98/post:3.0
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     networks:
       - front_net
       - back_net
@@ -40,6 +43,8 @@ services:
 
   comment:
     image: dinky98/comment:3.0
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     networks:
       - front_net
       - back_net
@@ -47,6 +52,8 @@ services:
 
   prometheus:
     image: dinky98/prometheus
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     ports:
       - '9090:9090'
     volumes:
