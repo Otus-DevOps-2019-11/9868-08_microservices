@@ -39,6 +39,8 @@ services:
       options:
         fluentd-address: localhost:24224
         tag: service.post
+    ports:
+      - "5000:5000"
 
 
   comment:
@@ -68,14 +70,12 @@ services:
 
 volumes:
   prometheus_data:
-
-volumes:
   post_db:
 
-networks:
-    front_net:
-        driver: bridge
-    back_net:
-        driver: bridge
 
+networks:
+  docker_front_net:
+    external: true
+  docker_back_net:
+    external: true
 
