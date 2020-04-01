@@ -5,7 +5,7 @@ services:
     volumes:
       - post_db:/data/db
     networks:
-      - back_net
+      - docker_back_net
   ui:
     image: dinky98/ui:3.0
     environment:
@@ -17,8 +17,8 @@ services:
     ports:
       - 9292:9292/tcp
     networks:
-      - front_net
-      - back_net
+      - docker_front_net
+      - docker_back_net
     depends_on:
       - post
     logging:
@@ -32,8 +32,8 @@ services:
     environment:
       - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     networks:
-      - front_net
-      - back_net
+      - docker_front_net
+      - docker_back_net
     logging:
       driver: "fluentd"
       options:
@@ -48,8 +48,8 @@ services:
     environment:
       - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     networks:
-      - front_net
-      - back_net
+      - docker_front_net
+      - docker_back_net
 
 
   prometheus:
@@ -65,8 +65,8 @@ services:
       - '--storage.tsdb.path=/prometheus'
       - '--storage.tsdb.retention=1d'
     networks:
-      - front_net
-      - back_net
+      - docker_front_net
+      - docker_back_net
 
 volumes:
   prometheus_data:
