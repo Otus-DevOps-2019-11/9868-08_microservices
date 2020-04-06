@@ -1,12 +1,15 @@
 # 9868-08_infra
 9868-08 microservices repository
 
-## Homework-26 (kubernetes-1)
+## Homework-26 (kubernetes-2)
 • Развернуто локальное окружение для работы с Kubernetes (minicube в virtualbox)
 • В minicube развернуты приложения ui,comment, post (самостоятельно)
 • Для связи ui с post и comment созданы объекты Service для post, comment и mongodb
 • Развернуто Kubernetes в GKE
-• Запустить reddit в Kubernetes
+• Развернуто Kubernetes в GKE 
+  там создан namespace dev в котором запущен reddit
+  http://35.225.3.217:31177/
+• скриншот веб-интерфейса приложения приложен (kubernetes/Screenshot_reddit_in_GKE.png)
 
 ## Homework-25 (kubernetes-1)
 
