@@ -1,7 +1,20 @@
 # 9868-08_infra
 9868-08 microservices repository
 
-## Homework-26 (kubernetes-1)
+## Homework-27 (kubernetes-3)
+Рассмотрена работа:
+• Ingress Controller
+• Ingress
+• Secret
+• TLS
+• LoadBalancer Service
+• Network Policies.
+• PersistentVolumes
+• PersistentVolumeClaims
+Все созданные в процессе работ файлы размещены в директории kubernetes/reddit
+
+
+## Homework-26 (kubernetes-2)
 • Развернуто локальное окружение для работы с Kubernetes (minicube в virtualbox)
 • В minicube развернуты приложения ui,comment, post (самостоятельно)
 • Для связи ui с post и comment созданы объекты Service для post, comment и mongodb
