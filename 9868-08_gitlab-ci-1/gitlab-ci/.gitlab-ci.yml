@@ -1,0 +1,84 @@
+image: docker:19.03.1
+
+variables:
+  DATABASE_URL: 'mongodb://mongo/user_posts'
+  DOCKER_DRIVER: overlay2
+  DATABASE_URL: 'mongodb://mongo/user_posts'
+  DOCKER_TLS_CERTDIR: ""
+stages:
+  - build
+  - test
+  - review
+  - stage
+  - production
+
+
+
+#before_script:
+#    - echo 'Getting, building and publishing reddit'
+#    - docker info
+#  - cd reddit
+#  - bundle install
+
+
+build_job:
+  stage: build
+  before_script:
+    - echo 'Getting, building and publishing reddit'
+    - apt update -y && apt install apt-transport-https ca-certificates curl software-properties-common -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+    - apt update -y && apt install docker-ce -y
+    - git clone --single-branch --branch docker-2 https://github.com/Otus-DevOps-2019-11/9868-08_microservices.git
+    - cd /9868-08_microservices/docker-monolith
+    - docker build -t my_reddit:1.0 .
+#    - docker login -u $HUB_LOGIN -p $HUB_PASSWORD
+#    - docker push my_reddit:1.0
+
+  script:
+    - ls; pwd
+    - docker build -t reddit:latest .
+    - docker images -a
+    - docker login -u $HUB_LOGIN -p $HUB_PASSWORD
+ #   - docker tag reddit:latest $HUB_LOGIN/otus-reddit:2.$CI_PIPELINE_ID
+    - docker push $HUB_LOGIN/my_reddit:1.0
+    - docker rmi reddit
+
+test_unit_job:
+  stage: test
+  services:
+  - mongo:latest
+  script:
+  - ruby simpletest.rb
+
+
+test_integration_job:
+  stage: test
+  script:
+  - echo 'Testing 2'
+
+deploy_dev_job:
+  stage: review
+  script:
+  - echo 'Deploy'
+  environment:
+    name: dev
+    url: http://dev.example.com
+
+staging:
+  stage: stage
+  when: manual
+  only:
+    - /^\d+\.\d+\.\d+/
+  script:
+    - echo 'Deploy'
+  environment:
+    name: stage
+    url: https://beta.example.com
+
+production:
+  stage: production
+  when: manual
+  script:
+    - echo 'Deploy'
+  environment:
+    name: production
+    url: https://example.com
