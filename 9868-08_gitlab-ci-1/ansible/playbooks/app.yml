@@ -1,0 +1,11 @@
+---
+- name: Configure App
+  hosts: 
+    - app
+    - reddit-app
+  become: true
+  vars:
+    db_host: 10.132.0.53
+  roles:
+    - app
+    - jdauphant.nginx
