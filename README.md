@@ -3,11 +3,11 @@
 
 ### 19. Устройство Gitlab CI. Построение процесса непрерывной интеграции
 ###### What's been done during this homework:
-- установка docker
-http://www.inanzzz.com/index.php/post/lvwk/installing-docker-and-docker-compose-on-remote-server-with-ansible
 - gitlab ci инсталлирован и подготовлен к работе
 - ci/cd конвеер создан для тестировани и разворачивания приложения
-- построены docker контейнеры для тестирования
+- построены docker контейнеры для тестирования в dind mode
+- создание docker контейнера для приложения reddit добавлено на шаге build
+- (*) deploy созданного контейнера протестирован на сервере с использованием gitlab runner в режиме shell executor mode
 
 
 ## Homework-17 (docker-4)
