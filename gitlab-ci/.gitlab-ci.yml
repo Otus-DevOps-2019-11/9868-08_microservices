@@ -27,6 +27,9 @@ stages:
   # - bundle install
 
 build_job:
+  services:
+    - docker:19.03.1-dind
+  #image: docker:19.03.1-dind
   stage: build
   before_script:
     - echo 'Getting, building and publishing reddit'
@@ -36,10 +39,12 @@ build_job:
     #- docker info
     - ls -l
     - cd ./docker-monolith
+   # - ls -l
+    #- cd ./reddit
     - docker info
     - docker build -t reddit:latest .
     - docker images -a
-    - docker login -u $HUB_LOGIN -p $HUB_PASSWORD
+   # - docker login -u $HUB_LOGIN -p $HUB_PASSWORD
     - docker tag reddit:latest $HUB_LOGIN/otus-reddit:2.$CI_PIPELINE_ID
     - docker push $HUB_LOGIN/otus-reddit:2.$CI_PIPELINE_ID
     - docker rmi reddit
