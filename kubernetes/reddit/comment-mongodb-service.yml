@@ -5,10 +5,7 @@ metadata:
   name: mongodb
   labels:
     app: reddit
-    component: mongo
-spec:
-  ports:
-  - port: 27017
+    comp...017
     protocol: TCP
     targetPort: 27017
   selector:
