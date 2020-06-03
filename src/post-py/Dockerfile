@@ -5,6 +5,7 @@ COPY . /app
 
 RUN apk --no-cache --update add build-base=0.4-r1 && \
     pip install --upgrade pip && pip install -r /app/requirements.txt && \
+    apk add --no-cache build-base  make gcc musl-dev && \
     apk del build-base
 
 ENV POST_DATABASE_HOST post_db

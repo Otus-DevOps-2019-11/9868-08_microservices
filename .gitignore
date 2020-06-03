@@ -4,7 +4,6 @@
 *.tfstate.*
 *.tfvars
 *.github
-.*
 *.retry
 jdauphant.nginx
 

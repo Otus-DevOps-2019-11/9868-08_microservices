@@ -1,0 +1,58 @@
+---
+version: '3.3'
+services:
+  zipkin:
+    image: openzipkin/zipkin
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+    ports:
+      - "9411:9411"
+    networks:
+      - front_net
+      - back_net
+
+  fluentd:
+    image: dinky98/fluentd
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    networks:
+      - front_net
+      - back_net
+
+  elasticsearch:
+    image: elasticsearch:7.4.0
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+      - ELASTIC_CLUSTER=false
+      - CLUSTER_NODE_MASTER=true
+      - CLUSTER_MASTER_NODE_NAME=es01
+      - discovery.type=single-node
+    expose:
+      - 9200
+    ports:
+      - "9200:9200"
+    networks:
+      - front_net
+      - back_net
+
+  kibana:
+    image: kibana:7.4.0
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+    ports:
+      - "5601:5601"
+    networks:
+      - front_net
+      - back_net
+    depends_on:
+      - elasticsearch
+      - fluentd
+
+networks:
+    front_net:
+#        driver: bridge
+    back_net:
+#        driver: bridge

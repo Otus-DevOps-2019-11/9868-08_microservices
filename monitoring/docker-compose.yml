@@ -1,0 +1,45 @@
+version: '2.0'
+services:
+  post_db:
+    image: mongo:3.2
+    volumes:
+      - post_db:/data/db
+    networks:
+      - back_net
+  ui:
+    ports:
+      - 9292:9292/tcp
+    networks:
+      - front_net
+    depends_on:
+      - post_db
+    image: dinky98/ui:3.0
+
+  post:
+    image: dinky98/post:3.0
+    networks:
+      - front_net
+      - back_net
+
+
+  comment:
+    image: dinky98/comment:latest
+    networks:
+      - front_net
+      - back_net
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.post
+
+
+volumes:
+  post_db:
+
+networks:
+    front_net:
+        driver: bridge
+    back_net:
+        driver: bridge
+
