@@ -1,0 +1,3983 @@
+Name:           comment-6b5497847-2h6ns
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 12:48:20 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-2x56b
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:17:23 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 60Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/comment-6b5497847-2x56b to minikube
+  Normal   Pulling           35m        kubelet, minikube  Pulling image "dinky98/comment"
+  Normal   Pulled            31m        kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created           31m        kubelet, minikube  Created container comment
+  Normal   Started           31m        kubelet, minikube  Started container comment
+  Warning  Evicted           22m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container comment was using 60Ki, which exceeds its request of 0.
+  Normal   Killing           22m        kubelet, minikube  Stopping container comment
+
+
+Name:           comment-6b5497847-55nz5
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:17:12 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age                 From               Message
+  ----     ------            ----                ----               -------
+  Warning  FailedScheduling  <unknown>           default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>           default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>           default-scheduler  Successfully assigned default/comment-6b5497847-55nz5 to minikube
+  Warning  Evicted           31m                 kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Normal   Killing           31m                 kubelet, minikube  Stopping container comment
+  Normal   SandboxChanged    31m                 kubelet, minikube  Pod sandbox changed, it will be killed and re-created.
+  Normal   Created           31m (x3 over 31m)   kubelet, minikube  Created container comment
+  Normal   Started           31m (x3 over 31m)   kubelet, minikube  Started container comment
+  Warning  BackOff           31m (x2 over 31m)   kubelet, minikube  Back-off restarting failed container
+  Normal   Pulling           30m (x6 over 35m)   kubelet, minikube  Pulling image "dinky98/comment"
+  Warning  Failed            30m (x3 over 30m)   kubelet, minikube  Error: Error response from daemon: Conflict. The container name "/k8s_comment_comment-6b5497847-55nz5_default_247e3e60-d0ef-49da-aa90-2d00fb1ab712_1" is already in use by container "833f34a56a2493b1262a643b64ca1431c669ab6ce5bc27cfdacce2af3b3ea3bb". You have to remove (or rename) that container to be able to reuse that name.
+  Normal   Pulled            25m (x10 over 31m)  kubelet, minikube  Successfully pulled image "dinky98/comment"
+
+
+Name:           comment-6b5497847-5h9jn
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:50:26 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Pulled            52m        kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created           52m        kubelet, minikube  Created container comment
+  Normal   Started           52m        kubelet, minikube  Started container comment
+  Warning  Evicted           40m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0.
+  Normal   Killing           40m        kubelet, minikube  Stopping container comment
+
+
+Name:           comment-6b5497847-5scg9
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:17:17 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-6mwhh
+Namespace:      default
+Priority:       0
+Node:           minikube/172.17.0.2
+Start Time:     Fri, 03 Apr 2020 14:45:29 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Pending
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Container ID:   
+    Image:          dinky98/comment
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age        From               Message
+  ----     ------               ----       ----               -------
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>  default-scheduler  Successfully assigned default/comment-6b5497847-6mwhh to minikube
+  Normal   Pulling              7m20s      kubelet, minikube  Pulling image "dinky98/comment"
+  Warning  Evicted              65s        kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  55s        kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+
+
+Name:           comment-6b5497847-82m48
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:17 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/comment-6b5497847-82m48 to minikube
+  Normal   Pulling           16m        kubelet, minikube  Pulling image "dinky98/comment"
+  Normal   Pulled            13m        kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created           13m        kubelet, minikube  Created container comment
+  Normal   Started           13m        kubelet, minikube  Started container comment
+  Warning  Evicted           12m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container comment was using 48Ki, which exceeds its request of 0.
+  Normal   Killing           12m        kubelet, minikube  Stopping container comment
+
+
+Name:           comment-6b5497847-8gn9v
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:02:24 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-b5ptz
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:29:40 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:         comment-6b5497847-g6sdw
+Namespace:    default
+Priority:     0
+Node:         minikube/172.17.0.2
+Start Time:   Fri, 03 Apr 2020 14:45:19 +0400
+Labels:       app=reddit
+              component=comment
+              pod-template-hash=6b5497847
+Annotations:  <none>
+Status:       Running
+IP:           172.18.0.5
+IPs:
+  IP:           172.18.0.5
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Container ID:   docker://03924e0144e916bea3a355491097a7b1d04d2451a2bea8e4e1fbb8a633fde705
+    Image:          dinky98/comment
+    Image ID:       docker-pullable://dinky98/comment@sha256:67363e101de7a343c655a0c3b3a22712a0afa2c7797996ff0d423ea6228c021d
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Fri, 03 Apr 2020 14:48:23 +0400
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/comment-6b5497847-g6sdw to minikube
+  Normal   Pulling           7m30s      kubelet, minikube  Pulling image "dinky98/comment"
+  Normal   Pulled            4m28s      kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created           4m27s      kubelet, minikube  Created container comment
+  Normal   Started           4m27s      kubelet, minikube  Started container comment
+
+
+Name:           comment-6b5497847-gznrb
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:40:03 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-jxjgw
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:17:12 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                From               Message
+  ----     ------               ----               ----               -------
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>          default-scheduler  Successfully assigned default/comment-6b5497847-jxjgw to minikube
+  Warning  Evicted              32m (x3 over 34m)  kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  32m (x3 over 34m)  kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   Pulling              31m (x2 over 35m)  kubelet, minikube  Pulling image "dinky98/comment"
+  Normal   SandboxChanged       31m                kubelet, minikube  Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulled               31m (x2 over 31m)  kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created              31m (x2 over 31m)  kubelet, minikube  Created container comment
+  Normal   Started              31m (x2 over 31m)  kubelet, minikube  Started container comment
+  Normal   Killing              22m (x2 over 31m)  kubelet, minikube  Stopping container comment
+  Warning  Evicted              22m                kubelet, minikube  The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0.
+
+
+Name:           comment-6b5497847-jxl4b
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:50:26 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Pulled            52m        kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created           52m        kubelet, minikube  Created container comment
+  Normal   Started           52m        kubelet, minikube  Started container comment
+  Warning  Evicted           40m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0.
+  Normal   Killing           40m        kubelet, minikube  Stopping container comment
+
+
+Name:           comment-6b5497847-klmz4
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:07 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 44Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/comment-6b5497847-klmz4 to minikube
+  Normal   Pulling           16m        kubelet, minikube  Pulling image "dinky98/comment"
+  Normal   Pulled            13m        kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created           13m        kubelet, minikube  Created container comment
+  Normal   Started           13m        kubelet, minikube  Started container comment
+  Warning  Evicted           12m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container comment was using 44Ki, which exceeds its request of 0.
+  Normal   Killing           12m        kubelet, minikube  Stopping container comment
+
+
+Name:           comment-6b5497847-kn856
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:02:24 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-ljntn
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:29:40 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-n8jdd
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 12:48:20 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-prks6
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:50:15 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Pulled            53m        kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created           53m        kubelet, minikube  Created container comment
+  Normal   Started           53m        kubelet, minikube  Started container comment
+  Warning  Evicted           51m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0.
+  Normal   Killing           51m        kubelet, minikube  Stopping container comment
+
+
+Name:           comment-6b5497847-ss9zw
+Namespace:      default
+Priority:       0
+Node:           minikube/172.17.0.2
+Start Time:     Fri, 03 Apr 2020 14:45:19 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Pending
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Container ID:   
+    Image:          dinky98/comment
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age        From               Message
+  ----     ------               ----       ----               -------
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>  default-scheduler  Successfully assigned default/comment-6b5497847-ss9zw to minikube
+  Normal   Pulling              7m29s      kubelet, minikube  Pulling image "dinky98/comment"
+  Warning  Evicted              4m25s      kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  4m15s      kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+
+
+Name:           comment-6b5497847-std8n
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:02:24 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 56Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-tb5jd
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:40:03 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-vm5ml
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:07:09 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/comment-6b5497847-vm5ml to minikube
+  Normal   Pulling           45m        kubelet, minikube  Pulling image "dinky98/comment"
+  Normal   Pulled            41m        kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created           41m        kubelet, minikube  Created container comment
+  Normal   Started           41m        kubelet, minikube  Started container comment
+  Warning  Evicted           40m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container comment was using 48Ki, which exceeds its request of 0.
+  Normal   Killing           40m        kubelet, minikube  Stopping container comment
+
+
+Name:           comment-6b5497847-wqt46
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 12:48:20 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container comment was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-xvvr2
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:29:40 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           comment-6b5497847-zp52k
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:06 +0400
+Labels:         app=reddit
+                component=comment
+                pod-template-hash=6b5497847
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/comment-6b5497847
+Containers:
+  comment:
+    Image:      dinky98/comment
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      COMMENT_DATABASE_HOST:  comment-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                From               Message
+  ----     ------               ----               ----               -------
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>          default-scheduler  Successfully assigned default/comment-6b5497847-zp52k to minikube
+  Normal   Pulling              16m                kubelet, minikube  Pulling image "dinky98/comment"
+  Warning  Evicted              13m (x2 over 15m)  kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Normal   Pulled               13m                kubelet, minikube  Successfully pulled image "dinky98/comment"
+  Normal   Created              13m                kubelet, minikube  Created container comment
+  Normal   Started              13m                kubelet, minikube  Started container comment
+  Normal   Killing              13m                kubelet, minikube  Stopping container comment
+  Warning  ExceededGracePeriod  13m (x2 over 15m)  kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+
+
+Name:           mongo-58846dd98c-4mc8c
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:07:09 +0400
+Labels:         app=reddit
+                component=mongo
+                pod-template-hash=58846dd98c
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container mongo was using 56Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Image:        mongo:3.2
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                From               Message
+  ----     ------               ----               ----               -------
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>          default-scheduler  Successfully assigned default/mongo-58846dd98c-4mc8c to minikube
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Pulling              45m                kubelet, minikube  Pulling image "mongo:3.2"
+  Warning  Evicted              41m (x2 over 42m)  kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Normal   Pulled               41m                kubelet, minikube  Successfully pulled image "mongo:3.2"
+  Warning  ExceededGracePeriod  41m (x2 over 42m)  kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   SandboxChanged       41m (x2 over 41m)  kubelet, minikube  Pod sandbox changed, it will be killed and re-created.
+  Warning  BackOff              41m (x2 over 41m)  kubelet, minikube  Back-off restarting failed container
+  Normal   Created              41m (x3 over 41m)  kubelet, minikube  Created container mongo
+  Normal   Started              41m (x3 over 41m)  kubelet, minikube  Started container mongo
+  Normal   Pulled               41m (x2 over 41m)  kubelet, minikube  Container image "mongo:3.2" already present on machine
+  Normal   Killing              30m (x3 over 41m)  kubelet, minikube  Stopping container mongo
+  Warning  Evicted              30m                kubelet, minikube  The node was low on resource: ephemeral-storage. Container mongo was using 56Ki, which exceeds its request of 0.
+
+
+Name:         mongo-58846dd98c-7kjvz
+Namespace:    default
+Priority:     0
+Node:         minikube/172.17.0.2
+Start Time:   Fri, 03 Apr 2020 14:45:19 +0400
+Labels:       app=reddit
+              component=mongo
+              pod-template-hash=58846dd98c
+Annotations:  <none>
+Status:       Running
+IP:           172.18.0.4
+IPs:
+  IP:           172.18.0.4
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Container ID:   docker://e97f1cc4259efbd702e8836f3f5f897e2ffee404c320d189c99ff01460b4a5c7
+    Image:          mongo:3.2
+    Image ID:       docker-pullable://mongo@sha256:0463a91d8eff189747348c154507afc7aba045baa40e8d58d8a4c798e71001f3
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Fri, 03 Apr 2020 14:45:52 +0400
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/mongo-58846dd98c-7kjvz to minikube
+  Normal   Pulling           7m31s      kubelet, minikube  Pulling image "mongo:3.2"
+  Normal   Pulled            7m         kubelet, minikube  Successfully pulled image "mongo:3.2"
+  Normal   Created           6m59s      kubelet, minikube  Created container mongo
+  Normal   Started           6m59s      kubelet, minikube  Started container mongo
+
+
+Name:           mongo-58846dd98c-9wwlh
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:50:15 +0400
+Labels:         app=reddit
+                component=mongo
+                pod-template-hash=58846dd98c
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container mongo was using 44Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Image:        mongo:3.2
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Pulled            52m        kubelet, minikube  Successfully pulled image "mongo:3.2"
+  Normal   Created           52m        kubelet, minikube  Created container mongo
+  Normal   Started           52m        kubelet, minikube  Started container mongo
+  Warning  Evicted           51m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container mongo was using 44Ki, which exceeds its request of 0.
+  Normal   Killing           51m        kubelet, minikube  Stopping container mongo
+
+
+Name:           mongo-58846dd98c-brzp7
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:02:14 +0400
+Labels:         app=reddit
+                component=mongo
+                pod-template-hash=58846dd98c
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container mongo was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Image:        mongo:3.2
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           mongo-58846dd98c-hxms2
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:17:17 +0400
+Labels:         app=reddit
+                component=mongo
+                pod-template-hash=58846dd98c
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container mongo was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Image:        mongo:3.2
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           mongo-58846dd98c-p6bjm
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 12:48:20 +0400
+Labels:         app=reddit
+                component=mongo
+                pod-template-hash=58846dd98c
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container mongo was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Image:        mongo:3.2
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           mongo-58846dd98c-qmrhv
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:27:24 +0400
+Labels:         app=reddit
+                component=mongo
+                pod-template-hash=58846dd98c
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container mongo was using 44Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Image:        mongo:3.2
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/mongo-58846dd98c-qmrhv to minikube
+  Normal   Pulling           25m        kubelet, minikube  Pulling image "mongo:3.2"
+  Normal   Pulled            23m        kubelet, minikube  Successfully pulled image "mongo:3.2"
+  Normal   Created           23m        kubelet, minikube  Created container mongo
+  Normal   Started           22m        kubelet, minikube  Started container mongo
+  Warning  Evicted           22m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container mongo was using 44Ki, which exceeds its request of 0.
+  Normal   Killing           22m        kubelet, minikube  Stopping container mongo
+
+
+Name:           mongo-58846dd98c-swlgf
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:40:03 +0400
+Labels:         app=reddit
+                component=mongo
+                pod-template-hash=58846dd98c
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container mongo was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Image:        mongo:3.2
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           mongo-58846dd98c-vt4n5
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:29:40 +0400
+Labels:         app=reddit
+                component=mongo
+                pod-template-hash=58846dd98c
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container mongo was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Image:        mongo:3.2
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           mongo-58846dd98c-wx4f4
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:06 +0400
+Labels:         app=reddit
+                component=mongo
+                pod-template-hash=58846dd98c
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container mongo was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/mongo-58846dd98c
+Containers:
+  mongo:
+    Image:        mongo:3.2
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /data/db from mongo-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  mongo-persistent-storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/mongo-58846dd98c-wx4f4 to minikube
+  Normal   Pulled            16m        kubelet, minikube  Container image "mongo:3.2" already present on machine
+  Normal   Created           16m        kubelet, minikube  Created container mongo
+  Normal   Started           16m        kubelet, minikube  Started container mongo
+  Warning  Evicted           13m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container mongo was using 52Ki, which exceeds its request of 0.
+  Normal   Killing           13m        kubelet, minikube  Stopping container mongo
+
+
+Name:           post-5764485b79-2ggfg
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:29:40 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-2hzgf
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:29:51 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-2qhx4
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:07:09 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                From               Message
+  ----     ------               ----               ----               -------
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>          default-scheduler  Successfully assigned default/post-5764485b79-2qhx4 to minikube
+  Warning  Evicted              42m (x2 over 43m)  kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  42m (x2 over 43m)  kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   SandboxChanged       41m                kubelet, minikube  Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulling              41m (x2 over 45m)  kubelet, minikube  Pulling image "dinky98/post"
+  Normal   Pulled               41m (x2 over 41m)  kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created              41m (x2 over 41m)  kubelet, minikube  Created container post
+  Normal   Started              41m (x2 over 41m)  kubelet, minikube  Started container post
+  Normal   Killing              40m (x2 over 41m)  kubelet, minikube  Stopping container post
+  Warning  Evicted              40m                kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 52Ki, which exceeds its request of 0.
+
+
+Name:           post-5764485b79-2xljm
+Namespace:      default
+Priority:       0
+Node:           minikube/172.17.0.2
+Start Time:     Fri, 03 Apr 2020 14:45:19 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Pending
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Container ID:   
+    Image:          dinky98/post
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age        From               Message
+  ----     ------               ----       ----               -------
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-2xljm to minikube
+  Normal   Pulling              7m30s      kubelet, minikube  Pulling image "dinky98/post"
+  Warning  Evicted              3m6s       kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  2m56s      kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+
+
+Name:           post-5764485b79-46qjw
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:07 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 240Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-46qjw to minikube
+  Normal   Pulling           16m        kubelet, minikube  Pulling image "dinky98/post"
+  Normal   Pulled            15m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created           15m        kubelet, minikube  Created container post
+  Normal   Started           15m        kubelet, minikube  Started container post
+  Warning  Evicted           12m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 240Ki, which exceeds its request of 0.
+  Normal   Killing           12m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-4c6m7
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:07:09 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                From               Message
+  ----     ------               ----               ----               -------
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>          default-scheduler  Successfully assigned default/post-5764485b79-4c6m7 to minikube
+  Warning  Evicted              44m                kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  44m                kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   SandboxChanged       42m                kubelet, minikube  Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulling              42m (x2 over 45m)  kubelet, minikube  Pulling image "dinky98/post"
+  Normal   Pulled               41m (x2 over 42m)  kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created              41m (x2 over 42m)  kubelet, minikube  Created container post
+  Normal   Started              41m (x2 over 42m)  kubelet, minikube  Started container post
+  Normal   Killing              40m (x2 over 42m)  kubelet, minikube  Stopping container post
+  Warning  Evicted              40m                kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 52Ki, which exceeds its request of 0.
+
+
+Name:         post-5764485b79-5pmnl
+Namespace:    default
+Priority:     0
+Node:         minikube/172.17.0.2
+Start Time:   Fri, 03 Apr 2020 13:40:03 +0400
+Labels:       app=reddit
+              component=post
+              pod-template-hash=5764485b79
+Annotations:  <none>
+Status:       Failed
+IP:           172.18.0.8
+IPs:
+  IP:           172.18.0.8
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Container ID:   docker://d986fec1a1ce8047a7e6a8ff0254c4d93e4fd549b237fad509e0e8066dbb0e3a
+    Image:          dinky98/post
+    Image ID:       docker-pullable://dinky98/post@sha256:3523b7ba698c408ffdc7ac1d4388f1fec8280fa2781effddb797ba3d7274ea66
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    137
+      Started:      Fri, 03 Apr 2020 13:44:56 +0400
+      Finished:     Fri, 03 Apr 2020 13:44:57 +0400
+    Ready:          False
+    Restart Count:  1
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-5tvh5
+Namespace:      default
+Priority:       0
+Node:           minikube/172.17.0.2
+Start Time:     Fri, 03 Apr 2020 14:45:19 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Pending
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Container ID:   
+    Image:          dinky98/post
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age        From               Message
+  ----     ------               ----       ----               -------
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-5tvh5 to minikube
+  Normal   Pulling              7m30s      kubelet, minikube  Pulling image "dinky98/post"
+  Warning  Evicted              26s        kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  16s        kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+
+
+Name:           post-5764485b79-66l8c
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:17:23 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                From               Message
+  ----     ------               ----               ----               -------
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>          default-scheduler  Successfully assigned default/post-5764485b79-66l8c to minikube
+  Normal   Pulling              35m                kubelet, minikube  Pulling image "dinky98/post"
+  Warning  Evicted              32m (x2 over 34m)  kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  31m (x2 over 33m)  kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   Pulled               31m                kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created              31m                kubelet, minikube  Created container post
+  Normal   Started              31m                kubelet, minikube  Started container post
+  Normal   Killing              31m                kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-6l482
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:17:17 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-8btps
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:40:03 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 232Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-8shsl
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:50:15 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age        From               Message
+  ----     ------               ----       ----               -------
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  Evicted              53m        kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  53m        kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   Pulled               52m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created              52m        kubelet, minikube  Created container post
+  Normal   Started              52m        kubelet, minikube  Started container post
+  Normal   Killing              52m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-8x6cl
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:17:12 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 272Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-8x6cl to minikube
+  Normal   Pulling           35m        kubelet, minikube  Pulling image "dinky98/post"
+  Normal   Pulled            35m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created           35m        kubelet, minikube  Created container post
+  Normal   Started           35m        kubelet, minikube  Started container post
+  Warning  Evicted           30m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 272Ki, which exceeds its request of 0.
+  Normal   Killing           30m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-b2pbp
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:17:17 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-b5mrl
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 12:48:20 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 232Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-bwdzw
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:06 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 236Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-bwdzw to minikube
+  Normal   Pulling           16m        kubelet, minikube  Pulling image "dinky98/post"
+  Normal   Pulled            16m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created           16m        kubelet, minikube  Created container post
+  Normal   Started           16m        kubelet, minikube  Started container post
+  Warning  Evicted           12m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 236Ki, which exceeds its request of 0.
+  Normal   Killing           12m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-cpwvz
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:50:15 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 240Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Pulled            53m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created           53m        kubelet, minikube  Created container post
+  Normal   Started           53m        kubelet, minikube  Started container post
+  Warning  Evicted           51m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 240Ki, which exceeds its request of 0.
+  Normal   Killing           51m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-d79br
+Namespace:      default
+Priority:       0
+Node:           minikube/172.17.0.2
+Start Time:     Fri, 03 Apr 2020 14:45:19 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Pending
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Container ID:   
+    Image:          dinky98/post
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-d79br to minikube
+  Normal   Pulling           7m31s      kubelet, minikube  Pulling image "dinky98/post"
+
+
+Name:           post-5764485b79-f6grz
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:07:10 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age        From               Message
+  ----     ------               ----       ----               -------
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-f6grz to minikube
+  Normal   Pulling              45m        kubelet, minikube  Pulling image "dinky98/post"
+  Warning  Evicted              44m        kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  44m        kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   Pulled               41m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created              41m        kubelet, minikube  Created container post
+  Normal   Started              41m        kubelet, minikube  Started container post
+  Normal   Killing              41m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-fhg42
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:40:03 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-fjxzs
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:02:14 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 268Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-jstnq
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:27:24 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age                From               Message
+  ----     ------            ----               ----               -------
+  Warning  FailedScheduling  <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>          default-scheduler  Successfully assigned default/post-5764485b79-jstnq to minikube
+  Warning  FailedScheduling  <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  Failed            24m                kubelet, minikube  Error: ImagePullBackOff
+  Warning  Failed            24m                kubelet, minikube  Failed to pull image "dinky98/post": rpc error: code = Unknown desc = Error response from daemon: Get https://registry-1.docker.io/v2/dinky98/post/manifests/latest: read tcp 172.17.0.2:34126->54.152.200.115:443: read: connection reset by peer
+  Warning  Failed            24m                kubelet, minikube  Error: ErrImagePull
+  Normal   BackOff           24m                kubelet, minikube  Back-off pulling image "dinky98/post"
+  Warning  Evicted           22m                kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Normal   Killing           22m                kubelet, minikube  Stopping container post
+  Normal   SandboxChanged    22m                kubelet, minikube  Pod sandbox changed, it will be killed and re-created.
+  Normal   Created           22m (x3 over 22m)  kubelet, minikube  Created container post
+  Normal   Started           22m (x3 over 22m)  kubelet, minikube  Started container post
+  Warning  BackOff           22m (x2 over 22m)  kubelet, minikube  Back-off restarting failed container
+  Normal   Pulling           22m (x5 over 25m)  kubelet, minikube  Pulling image "dinky98/post"
+  Normal   Pulled            22m (x4 over 22m)  kubelet, minikube  Successfully pulled image "dinky98/post"
+  Warning  Failed            22m                kubelet, minikube  Error: Error response from daemon: Conflict. The container name "/k8s_post_post-5764485b79-jstnq_default_62330e04-87d6-4a5c-87f4-0e49e266112b_1" is already in use by container "3d32040ec311d41b4b5462e80885963e70397223796ee88aba528bf81516666c". You have to remove (or rename) that container to be able to reuse that name.
+
+
+Name:           post-5764485b79-lz5hx
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:17:12 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 236Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-lz5hx to minikube
+  Normal   Pulling           35m        kubelet, minikube  Pulling image "dinky98/post"
+  Normal   Pulled            31m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created           31m        kubelet, minikube  Created container post
+  Normal   Started           31m        kubelet, minikube  Started container post
+  Warning  Evicted           30m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 236Ki, which exceeds its request of 0.
+  Normal   Killing           30m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-m92cf
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:02:14 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 264Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-msnrl
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:17 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-msnrl to minikube
+  Normal   Pulling           16m        kubelet, minikube  Pulling image "dinky98/post"
+  Warning  Evicted           13m        kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Normal   Pulled            13m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created           13m        kubelet, minikube  Created container post
+  Normal   Started           13m        kubelet, minikube  Started container post
+  Normal   Killing           13m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-nn2lx
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:29:40 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 260Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-qxgzh
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 12:48:20 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-rfrbr
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:02:14 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 268Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-st8cn
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:50:15 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Pulled            52m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created           52m        kubelet, minikube  Created container post
+  Normal   Started           52m        kubelet, minikube  Started container post
+  Warning  Evicted           51m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 52Ki, which exceeds its request of 0.
+  Normal   Killing           51m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-szbm5
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 12:48:20 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 236Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           post-5764485b79-t9m4s
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:27:24 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 168Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                From               Message
+  ----     ------               ----               ----               -------
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>          default-scheduler  Successfully assigned default/post-5764485b79-t9m4s to minikube
+  Warning  Evicted              24m                kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  24m                kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   SandboxChanged       23m                kubelet, minikube  Pod sandbox changed, it will be killed and re-created.
+  Normal   Started              22m (x3 over 23m)  kubelet, minikube  Started container post
+  Normal   Created              22m (x3 over 23m)  kubelet, minikube  Created container post
+  Warning  BackOff              22m (x2 over 22m)  kubelet, minikube  Back-off restarting failed container
+  Normal   Pulling              22m (x4 over 25m)  kubelet, minikube  Pulling image "dinky98/post"
+  Normal   Pulled               22m (x4 over 23m)  kubelet, minikube  Successfully pulled image "dinky98/post"
+  Warning  Failed               22m                kubelet, minikube  Error: Error response from daemon: Conflict. The container name "/k8s_post_post-5764485b79-t9m4s_default_48209946-293c-44ee-9ac0-48f7803abf2a_1" is already in use by container "45caa96304a3338046d8cef22ceddb296d31ef495f31bc3a9e33bcead3898299". You have to remove (or rename) that container to be able to reuse that name.
+  Normal   Killing              22m (x2 over 23m)  kubelet, minikube  Stopping container post
+  Warning  Evicted              22m                kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 168Ki, which exceeds its request of 0.
+
+
+Name:           post-5764485b79-tb6gm
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:27:24 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 236Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/post-5764485b79-tb6gm to minikube
+  Normal   Pulling           25m        kubelet, minikube  Pulling image "dinky98/post"
+  Normal   Pulled            23m        kubelet, minikube  Successfully pulled image "dinky98/post"
+  Normal   Created           23m        kubelet, minikube  Created container post
+  Normal   Started           23m        kubelet, minikube  Started container post
+  Warning  Evicted           22m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container post was using 236Ki, which exceeds its request of 0.
+  Normal   Killing           22m        kubelet, minikube  Stopping container post
+
+
+Name:           post-5764485b79-wh9jp
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:17:17 +0400
+Labels:         app=reddit
+                component=post
+                pod-template-hash=5764485b79
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container post was using 52Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/post-5764485b79
+Containers:
+  post:
+    Image:      dinky98/post
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      POST_DATABASE_HOST:  post-db
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           ui-556dbfd487-d8fxv
+Namespace:      default
+Priority:       0
+Node:           <none>
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=556dbfd487
+Annotations:    <none>
+Status:         Pending
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-556dbfd487
+Containers:
+  ui:
+    Image:      xxdeenxx/ui
+    Port:       <none>
+    Host Port:  <none>
+    Environment:
+      ENV:  default (v1:metadata.namespace)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+
+
+Name:           ui-86c5f794c7-242vc
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:17:27 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           ui-86c5f794c7-2z5l9
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:07:09 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-2z5l9 to minikube
+  Normal   Pulling           45m        kubelet, minikube  Pulling image "dinky98/ui"
+  Normal   Pulled            44m        kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Normal   Created           44m        kubelet, minikube  Created container ui
+  Normal   Started           44m        kubelet, minikube  Started container ui
+  Warning  Evicted           30m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0.
+  Normal   Killing           30m        kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-48hzm
+Namespace:      default
+Priority:       0
+Node:           minikube/172.17.0.2
+Start Time:     Fri, 03 Apr 2020 14:45:19 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Pending
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Container ID:   
+    Image:          dinky98/ui
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                    From               Message
+  ----     ------               ----                   ----               -------
+  Warning  FailedScheduling     <unknown>              default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>              default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>              default-scheduler  Successfully assigned default/ui-86c5f794c7-48hzm to minikube
+  Normal   Pulling              7m31s                  kubelet, minikube  Pulling image "dinky98/ui"
+  Warning  Evicted              2m26s (x2 over 3m46s)  kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  2m16s (x2 over 3m36s)  kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+
+
+Name:           ui-86c5f794c7-7fb2q
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:40:13 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason   Age   From               Message
+  ----     ------   ----  ----               -------
+  Warning  Evicted  51m   kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0.
+  Normal   Killing  51m   kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-8fpkp
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:02:14 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           ui-86c5f794c7-8slmq
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:07:20 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-8slmq to minikube
+  Normal   Pulling           45m        kubelet, minikube  Pulling image "dinky98/ui"
+  Normal   Pulled            41m        kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Normal   Created           41m        kubelet, minikube  Created container ui
+  Normal   Started           41m        kubelet, minikube  Started container ui
+  Warning  Evicted           30m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0.
+  Normal   Killing           30m        kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-bskg7
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:17:17 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           ui-86c5f794c7-gf7wd
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:40:03 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           ui-86c5f794c7-jqw9m
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:27:35 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age        From               Message
+  ----     ------               ----       ----               -------
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-jqw9m to minikube
+  Normal   Pulling              25m        kubelet, minikube  Pulling image "dinky98/ui"
+  Warning  Evicted              23m        kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  23m        kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   Pulled               22m        kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Normal   Created              22m        kubelet, minikube  Created container ui
+  Normal   Started              22m        kubelet, minikube  Started container ui
+  Normal   Killing              22m        kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-jr9gm
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:17:17 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           ui-86c5f794c7-k2wvl
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:02:14 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           ui-86c5f794c7-k48n2
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:07:20 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-k48n2 to minikube
+  Normal   Pulling           45m        kubelet, minikube  Pulling image "dinky98/ui"
+  Normal   Pulled            41m        kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Normal   Created           41m        kubelet, minikube  Created container ui
+  Normal   Started           41m        kubelet, minikube  Started container ui
+  Warning  Evicted           30m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0.
+  Normal   Killing           30m        kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-k6m6n
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:07 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 44Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                From               Message
+  ----     ------               ----               ----               -------
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>          default-scheduler  Successfully assigned default/ui-86c5f794c7-k6m6n to minikube
+  Warning  ExceededGracePeriod  14m (x2 over 15m)  kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Warning  Evicted              13m (x3 over 15m)  kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  BackOff              13m                kubelet, minikube  Back-off restarting failed container
+  Normal   SandboxChanged       13m (x2 over 13m)  kubelet, minikube  Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulling              13m (x3 over 16m)  kubelet, minikube  Pulling image "dinky98/ui"
+  Normal   Pulled               13m (x3 over 13m)  kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Normal   Started              13m (x3 over 13m)  kubelet, minikube  Started container ui
+  Normal   Created              13m (x3 over 13m)  kubelet, minikube  Created container ui
+  Normal   Killing              12m (x3 over 13m)  kubelet, minikube  Stopping container ui
+  Warning  Evicted              12m                kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 44Ki, which exceeds its request of 0.
+
+
+Name:           ui-86c5f794c7-ld8n6
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 12:48:29 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+
+
+Name:           ui-86c5f794c7-n9jsk
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:40:13 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason   Age   From               Message
+  ----     ------   ----  ----               -------
+  Warning  Evicted  51m   kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0.
+  Normal   Killing  51m   kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-px8x8
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:27:24 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-px8x8 to minikube
+  Normal   Pulling           25m        kubelet, minikube  Pulling image "dinky98/ui"
+  Normal   Pulled            24m        kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Normal   Created           24m        kubelet, minikube  Created container ui
+  Normal   Started           24m        kubelet, minikube  Started container ui
+  Warning  Evicted           22m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0.
+  Normal   Killing           22m        kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-qkx7s
+Namespace:      default
+Priority:       0
+Node:           minikube/172.17.0.2
+Start Time:     Fri, 03 Apr 2020 14:45:19 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Pending
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Container ID:   
+    Image:          dinky98/ui
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age        From               Message
+  ----     ------               ----       ----               -------
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling     <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled            <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-qkx7s to minikube
+  Normal   Pulling              7m31s      kubelet, minikube  Pulling image "dinky98/ui"
+  Warning  Evicted              107s       kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  97s        kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+
+
+Name:           ui-86c5f794c7-trtp8
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:06 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-trtp8 to minikube
+  Normal   Pulling           16m        kubelet, minikube  Pulling image "dinky98/ui"
+  Normal   Pulled            15m        kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Normal   Created           15m        kubelet, minikube  Created container ui
+  Normal   Started           15m        kubelet, minikube  Started container ui
+  Warning  Evicted           12m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0.
+  Normal   Killing           12m        kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-vnvwj
+Namespace:      default
+Priority:       0
+Node:           minikube/172.17.0.2
+Start Time:     Fri, 03 Apr 2020 14:45:29 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Pending
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Container ID:   
+    Image:          dinky98/ui
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-vnvwj to minikube
+  Normal   Pulling           7m22s      kubelet, minikube  Pulling image "dinky98/ui"
+
+
+Name:           ui-86c5f794c7-vwsnz
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 13:50:26 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 44Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason               Age                From               Message
+  ----     ------               ----               ----               -------
+  Warning  FailedScheduling     <unknown>          default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  Evicted              52m                kubelet, minikube  The node was low on resource: ephemeral-storage.
+  Warning  ExceededGracePeriod  52m                kubelet, minikube  Container runtime did not kill the pod within specified grace period.
+  Normal   SandboxChanged       52m                kubelet, minikube  Pod sandbox changed, it will be killed and re-created.
+  Normal   Created              51m (x3 over 52m)  kubelet, minikube  Created container ui
+  Normal   Started              51m (x3 over 52m)  kubelet, minikube  Started container ui
+  Warning  BackOff              51m (x2 over 51m)  kubelet, minikube  Back-off restarting failed container
+  Normal   Pulling              51m (x5 over 62m)  kubelet, minikube  Pulling image "dinky98/ui"
+  Normal   Pulled               51m (x5 over 52m)  kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Warning  Failed               51m (x2 over 51m)  kubelet, minikube  Error: Error response from daemon: Conflict. The container name "/k8s_ui_ui-86c5f794c7-vwsnz_default_2385c7e4-5c7f-4db0-a324-f88d2704b642_1" is already in use by container "e317baff049c29f0d29e3391cc010bc84e65b5e6aca791f8085e9d6a00f4c175". You have to remove (or rename) that container to be able to reuse that name.
+  Normal   Killing              51m (x2 over 52m)  kubelet, minikube  Stopping container ui
+  Warning  Evicted              51m                kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 44Ki, which exceeds its request of 0.
+
+
+Name:           ui-86c5f794c7-w6pzq
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:36:06 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-w6pzq to minikube
+  Normal   Pulling           16m        kubelet, minikube  Pulling image "dinky98/ui"
+  Normal   Pulled            13m        kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Normal   Created           13m        kubelet, minikube  Created container ui
+  Normal   Started           13m        kubelet, minikube  Started container ui
+  Warning  Evicted           12m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0.
+  Normal   Killing           12m        kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-wghg7
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 14:27:24 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age        From               Message
+  ----     ------            ----       ----               -------
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  <unknown>  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/disk-pressure: }, that the pod didn't tolerate.
+  Normal   Scheduled         <unknown>  default-scheduler  Successfully assigned default/ui-86c5f794c7-wghg7 to minikube
+  Normal   Pulling           25m        kubelet, minikube  Pulling image "dinky98/ui"
+  Normal   Pulled            24m        kubelet, minikube  Successfully pulled image "dinky98/ui"
+  Normal   Created           24m        kubelet, minikube  Created container ui
+  Normal   Started           24m        kubelet, minikube  Started container ui
+  Warning  Evicted           22m        kubelet, minikube  The node was low on resource: ephemeral-storage. Container ui was using 48Ki, which exceeds its request of 0.
+  Normal   Killing           22m        kubelet, minikube  Stopping container ui
+
+
+Name:           ui-86c5f794c7-xfq85
+Namespace:      default
+Priority:       0
+Node:           minikube/
+Start Time:     Fri, 03 Apr 2020 12:48:20 +0400
+Labels:         app=reddit
+                component=ui
+                pod-template-hash=86c5f794c7
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/ui-86c5f794c7
+Containers:
+  ui:
+    Image:        dinky98/ui
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ls4cj (ro)
+Volumes:
+  default-token-ls4cj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ls4cj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
